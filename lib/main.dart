@@ -1,4 +1,5 @@
-import 'package:coffee_delivery_app/widgets/main_navigator.dart';
+import 'package:coffee_delivery_app/resources/values/app_colors.dart';
+import 'package:coffee_delivery_app/screens/main_navigator_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -15,15 +16,15 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFF201520),
         colorScheme: ColorScheme.fromSwatch().copyWith(
-          primary: const Color(0xFF201520),
-          secondary: const Color(0xffefe3c8),
+          primary: AppColors.PRIMARY_COLOR,
+          secondary: AppColors.SECONDARY_COLOR,
         ),
         appBarTheme: const AppBarTheme(
-          color: Color(0x00201520),
+          color: AppColors.PRIMARY_COLOR,
           elevation: 0,
         ),
       ),
-      home: const MainNavigator(),
+      home: const MainNavigatorScreen(),
     );
   }
 }

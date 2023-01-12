@@ -6,7 +6,7 @@ class NewsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('News screen')),
+      appBar: AppBar(title: const Text('News Screen')),
     );
   }
 }

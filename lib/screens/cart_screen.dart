@@ -7,7 +7,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       // ignore: prefer_const_constructors
-      appBar: AppBar(title: Text('Cart screen')),
+      appBar: AppBar(title: Text('Cart Screen')),
     );
   }
 }
