@@ -46,7 +46,7 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
         type: BottomNavigationBarType.fixed,
         backgroundColor: Theme.of(context).colorScheme.primary,
         selectedItemColor: Theme.of(context).colorScheme.secondary,
-        unselectedItemColor: AppColors.UNSELECTED_SECONDARY_COLOR,
+        unselectedItemColor: AppColors.FADED_SECONDARY_COLOR,
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
