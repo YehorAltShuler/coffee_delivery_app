@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Coffee Delivery App',
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFF201520),
+        scaffoldBackgroundColor: AppColors.PRIMARY_COLOR,
         colorScheme: ColorScheme.fromSwatch().copyWith(
           primary: AppColors.PRIMARY_COLOR,
           secondary: AppColors.SECONDARY_COLOR,

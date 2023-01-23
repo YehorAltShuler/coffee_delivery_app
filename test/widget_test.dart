@@ -15,26 +15,17 @@ void main() {
   });
 
   testWidgets(
-      'Given user on the main_navigator_screen When BottomNavigationBarItem[0] is pressed Then _onItemTapped is called',
+      'Given user on the main_navigator_screen When BottomNavigationBarItem[1] is pressed Then _onItemTapped is called',
       (WidgetTester tester) async {
     // ASSEMBLE
 
     await tester.pumpWidget(const MyApp());
 
-    final Map iconButtons = {
-      find.byIcon(Icons.home): 'Home Screen',
-      find.byIcon(Icons.shopping_cart): 'Cart Screen',
-      find.byIcon(Icons.favorite): 'Favorites Screen',
-      find.byIcon(Icons.notifications): 'News Screen',
-    };
-
     //ACT
+    await tester.tap(find.byIcon(Icons.shopping_cart));
+    await tester.pump();
 
-    // ignore: void_checks
-    iconButtons.forEach((key, value) async* {
-      await tester.tap(key);
-      //ASSERT
-      expect(value, findsOneWidget);
-    });
+    //ASSERT
+    expect(find.text('Cart Screen'), findsOneWidget);
   });
 }

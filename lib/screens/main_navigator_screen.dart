@@ -15,11 +15,11 @@ class MainNavigatorScreen extends StatefulWidget {
 class _MainNavigatorState extends State<MainNavigatorScreen> {
   final PageController _pageController = PageController();
 
-  int _seletedIndex = 0;
+  int _selectedIndex = 0;
 
   void _onPageChanged(int index) {
     setState(() {
-      _seletedIndex = index;
+      _selectedIndex = index;
     });
   }
 
@@ -59,7 +59,7 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
               icon: Icon(Icons.notifications), label: 'News'),
         ],
         onTap: _onItemTapped,
-        currentIndex: _seletedIndex,
+        currentIndex: _selectedIndex,
       ),
     );
   }
