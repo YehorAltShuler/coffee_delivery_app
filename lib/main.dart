@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
             color: AppColors.PRIMARY_COLOR,
             elevation: 0,
           ),
+
         ),
         home: const MainNavigatorScreen(),
       ),
