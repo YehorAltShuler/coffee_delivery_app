@@ -1,4 +1,4 @@
-import 'package:coffee_delivery_app/providers/product.dart';
+import 'package:coffee_delivery_app/models/product.dart';
 import 'package:flutter/material.dart';
 
 class Products with ChangeNotifier {

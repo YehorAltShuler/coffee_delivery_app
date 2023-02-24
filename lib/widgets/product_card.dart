@@ -4,16 +4,11 @@ import 'package:coffee_delivery_app/widgets/card_product_image.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../providers/product.dart';
+import '../models/product.dart';
 
-class ProductCard extends StatefulWidget {
+class ProductCard extends StatelessWidget {
   const ProductCard({super.key});
 
-  @override
-  State<ProductCard> createState() => _ProductCardState();
-}
-
-class _ProductCardState extends State<ProductCard> {
   @override
   Widget build(BuildContext context) {
     final product = Provider.of<Product>(context);
@@ -39,6 +34,7 @@ class _ProductCardState extends State<ProductCard> {
                 alignment: Alignment.centerLeft,
                 child: Text(
                   product.title,
+                  overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.headline5,
                 ),
               ),

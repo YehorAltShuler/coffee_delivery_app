@@ -22,29 +22,28 @@ class CardProductImage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          ClipRRect(
-            borderRadius:
-                const BorderRadius.only(bottomRight: Radius.circular(20)),
-            child: Container(
-              decoration: const BoxDecoration(color: Colors.black38),
-              height: 25,
-              width: 50,
-              child: Padding(
-                padding: const EdgeInsets.all(4),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Icon(
-                      Icons.star,
-                      color: AppColors.STAR_COLOR,
-                      size: 18,
-                    ),
-                    Text(
-                      rate.toString(),
-                      style: Theme.of(context).textTheme.bodyText2,
-                    ),
-                  ],
-                ),
+          Container(
+            decoration: const BoxDecoration(
+              color: Colors.black38,
+              borderRadius: BorderRadius.only(bottomRight: Radius.circular(20)),
+            ),
+            height: 25,
+            width: 50,
+            child: Padding(
+              padding: const EdgeInsets.all(4),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Icon(
+                    Icons.star,
+                    color: AppColors.STAR_COLOR,
+                    size: 18,
+                  ),
+                  Text(
+                    rate.toString(),
+                    style: Theme.of(context).textTheme.bodyText2,
+                  ),
+                ],
               ),
             ),
           ),
