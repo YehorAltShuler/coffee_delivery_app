@@ -20,8 +20,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           fontFamily: 'Centaur',
           textTheme: ThemeData().textTheme.copyWith(
-                headline5: TextStyle(color: Colors.white),
-                bodyText2: TextStyle(color: Colors.white),
+                headline6: const TextStyle(color: Colors.white),
+                bodyText2: const TextStyle(color: Colors.white),
               ),
           scaffoldBackgroundColor: AppColors.PRIMARY_COLOR,
           colorScheme: ColorScheme.fromSwatch().copyWith(
@@ -32,7 +32,6 @@ class MyApp extends StatelessWidget {
             color: AppColors.PRIMARY_COLOR,
             elevation: 0,
           ),
-
         ),
         home: const MainNavigatorScreen(),
       ),

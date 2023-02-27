@@ -5,39 +5,39 @@ class Products with ChangeNotifier {
   final List<Product> _items = [
     Product(
       id: 'p1',
-      title: 'XXL Red Shirt',
-      description: 'A red shirt - it is pretty red!',
-      price: 29.99,
+      title: 'Cinamon & Cocoa',
+      description: 'Cappuchino with cinnamon & Cocoa',
+      price: 1.20,
       rate: 4.5,
       imageUrl:
-          'https://cdn.pixabay.com/photo/2016/10/02/22/17/red-t-shirt-1710578_1280.jpg',
+          'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2015_40/796316/latteartheart-11-150929.jpg',
     ),
     Product(
       id: 'p2',
-      title: 'Trousers',
-      description: 'A nice pair of trousers.',
-      price: 59.99,
+      title: 'Drizzled with Caramel',
+      description: 'Cappuchino Drizzled with Caramel',
+      price: 2.20,
       rate: 4.5,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Trousers%2C_dress_%28AM_1960.022-8%29.jpg/512px-Trousers%2C_dress_%28AM_1960.022-8%29.jpg',
+          'https://cdn.pixabay.com/photo/2021/02/03/12/00/coffee-5977682_1280.jpg',
     ),
     Product(
       id: 'p3',
-      title: 'Yellow Scarf',
-      description: 'Warm and cozy - exactly what you need for the winter.',
+      title: 'Bursting Blueberry',
+      description: 'Bursting Blueberry - exactly what you need for the winter.',
       price: 19.99,
       rate: 4.5,
       imageUrl:
-          'https://live.staticflickr.com/4043/4438260868_cc79b3369d_z.jpg',
+          'https://i.pinimg.com/originals/d2/20/cc/d220cc7597866bd990146ee2255e3672.jpg',
     ),
     Product(
       id: 'p4',
-      title: 'A Pan',
-      description: 'Prepare any meal you want.',
+      title: 'Dalgona Whipped Macha',
+      description: 'Dalgona Whipped Macha Latte, so green',
       price: 49.99,
       rate: 4.5,
       imageUrl:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Cast-Iron-Pan.jpg/1024px-Cast-Iron-Pan.jpg',
+          'https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1.jpg',
     ),
   ];
 
