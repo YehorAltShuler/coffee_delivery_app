@@ -12,7 +12,7 @@ class CardProductAdd extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: AppColors.VERY_FADED_SECONDARY_COLOR,
-        borderRadius: BorderRadius.circular(15),
+        borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
         children: [
@@ -20,17 +20,16 @@ class CardProductAdd extends StatelessWidget {
             child: Center(
               child: Text(
                 price.toString(),
-                style: Theme.of(context).textTheme.headline5,
+                style: Theme.of(context).textTheme.headline6,
                 overflow: TextOverflow.ellipsis,
               ),
             ),
           ),
-          Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(15)),
-            height: 45,
-            width: 45,
+          SizedBox(
+            height: 35,
+            width: 35,
             child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(10),
               child: Material(
                 color: AppColors.SECONDARY_COLOR,
                 child: InkWell(onTap: () {}, child: const Icon(Icons.add)),

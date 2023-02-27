@@ -16,8 +16,9 @@ class ProductsGrid extends StatelessWidget {
         crossAxisCount: 2,
       ),
       itemCount: products.length,
-      itemBuilder: (BuildContext context, int index) => ChangeNotifierProvider(
-        create: (context) => products[index],
+      itemBuilder: (BuildContext context, int index) =>
+          ChangeNotifierProvider.value(
+        value: products[index],
         child: const ProductCard(),
       ),
     );

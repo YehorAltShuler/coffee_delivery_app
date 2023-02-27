@@ -20,6 +20,9 @@ class CardProductImage extends StatelessWidget {
             child: Image.network(
               imageUrl,
               fit: BoxFit.cover,
+              errorBuilder: (BuildContext context, Object error,
+                      StackTrace? stackTrace) =>
+                  Container(),
             ),
           ),
           Container(
@@ -39,9 +42,11 @@ class CardProductImage extends StatelessWidget {
                     color: AppColors.STAR_COLOR,
                     size: 18,
                   ),
-                  Text(
-                    rate.toString(),
-                    style: Theme.of(context).textTheme.bodyText2,
+                  Expanded(
+                    child: Text(
+                      rate.toString(),
+                      style: Theme.of(context).textTheme.bodyText2,
+                    ),
                   ),
                 ],
               ),
