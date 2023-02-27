@@ -1,17 +1,17 @@
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
-import 'package:coffee_delivery_app/widgets/card_product_add.dart';
-import 'package:coffee_delivery_app/widgets/card_product_image.dart';
+import 'package:coffee_delivery_app/widgets/ProductCard/card_product_add.dart';
+import 'package:coffee_delivery_app/widgets/ProductCard/card_product_image.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
-import '../models/product.dart';
+import '../../models/product.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard({super.key});
+  const ProductCard({super.key, required this.product});
+
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
-    final product = Provider.of<Product>(context);
     return Card(
       margin: const EdgeInsets.all(10),
       shape: RoundedRectangleBorder(

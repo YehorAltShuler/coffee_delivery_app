@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../resources/values/app_colors.dart';
+import '../../resources/values/app_colors.dart';
 
 class CardProductAdd extends StatelessWidget {
   const CardProductAdd({super.key, required this.price});
