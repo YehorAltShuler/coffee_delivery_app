@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-
-class Product with ChangeNotifier {
+class Product {
   final String id;
   final String title;
   final String description;

@@ -1,5 +1,5 @@
 import 'package:coffee_delivery_app/providers/products_provider.dart';
-import 'package:coffee_delivery_app/widgets/product_card.dart';
+import 'package:coffee_delivery_app/widgets/ProductCard/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -17,10 +17,7 @@ class ProductsGrid extends StatelessWidget {
       ),
       itemCount: products.length,
       itemBuilder: (BuildContext context, int index) =>
-          ChangeNotifierProvider.value(
-        value: products[index],
-        child: const ProductCard(),
-      ),
+          ProductCard(product: products[index]),
     );
   }
 }
