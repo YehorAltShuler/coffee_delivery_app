@@ -6,7 +6,9 @@ class Products with ChangeNotifier {
     Product(
       id: 'p1',
       title: 'Cinamon & Cocoa',
-      description: 'Cappuchino with cinnamon & Cocoa',
+      drinkType: 'Cappuchino',
+      description:
+          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
       price: 1.20,
       rate: 4.5,
       imageUrl:
@@ -14,8 +16,10 @@ class Products with ChangeNotifier {
     ),
     Product(
       id: 'p2',
+      drinkType: 'Cappuchino',
       title: 'Drizzled with Caramel',
-      description: 'Cappuchino Drizzled with Caramel',
+      description:
+          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
       price: 2.20,
       rate: 4.5,
       imageUrl:
@@ -23,8 +27,10 @@ class Products with ChangeNotifier {
     ),
     Product(
       id: 'p3',
+      drinkType: 'Cappuchino',
       title: 'Bursting Blueberry',
-      description: 'Bursting Blueberry - exactly what you need for the winter.',
+      description:
+          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
       price: 19.99,
       rate: 4.5,
       imageUrl:
@@ -32,8 +38,10 @@ class Products with ChangeNotifier {
     ),
     Product(
       id: 'p4',
+      drinkType: 'Cappuchino',
       title: 'Dalgona Whipped Macha',
-      description: 'Dalgona Whipped Macha Latte, so green',
+      description:
+          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
       price: 49.99,
       rate: 4.5,
       imageUrl:
