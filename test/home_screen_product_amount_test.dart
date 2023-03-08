@@ -1,5 +1,5 @@
 import 'package:coffee_delivery_app/main.dart';
-import 'package:coffee_delivery_app/widgets/ProductCard/product_card.dart';
+import 'package:coffee_delivery_app/widgets/product_card/product_card.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:network_image_mock/network_image_mock.dart';
 

@@ -1,3 +1,4 @@
+import 'package:coffee_delivery_app/resources/values/custom_icons.dart';
 import 'package:flutter/material.dart';
 
 import '../../resources/values/app_colors.dart';
@@ -35,7 +36,12 @@ class CardProductAdd extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
               child: Material(
                 color: AppColors.SECONDARY_COLOR,
-                child: InkWell(onTap: () {}, child: const Icon(Icons.add)),
+                child: InkWell(
+                    onTap: () {},
+                    child: const Icon(
+                      CustomIcons.add,
+                      size: 14,
+                    )),
               ),
             ),
           ),
