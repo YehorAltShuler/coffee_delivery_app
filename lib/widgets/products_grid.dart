@@ -1,5 +1,5 @@
 import 'package:coffee_delivery_app/providers/products_provider.dart';
-import 'package:coffee_delivery_app/widgets/ProductCard/product_card.dart';
+import 'package:coffee_delivery_app/widgets/product_card/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:ui';
-
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:flutter/material.dart';
+import '../../resources/values/custom_icons.dart';
 
 class CardProductImage extends StatelessWidget {
   const CardProductImage(
@@ -45,9 +45,9 @@ class CardProductImage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Icon(
-                        Icons.star,
+                        CustomIcons.star,
                         color: AppColors.STAR_COLOR,
-                        size: 18,
+                        size: 14,
                       ),
                       Expanded(
                         child: Text(
