@@ -41,20 +41,14 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
-        key: const ValueKey('BottomNavigationBar'),
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
         backgroundColor: Theme.of(context).colorScheme.primary,
         selectedItemColor: Theme.of(context).colorScheme.secondary,
-        unselectedItemColor: AppColors.FADED_SECONDARY_COLOR,
+        unselectedItemColor: AppColors.UNSELECTED_SECONDARY_COLOR,
         items: const [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
-            label: 'Home',
-          ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart), label: 'Cart'),
           BottomNavigationBarItem(
