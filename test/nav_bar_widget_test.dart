@@ -18,7 +18,7 @@ void main() {
                 .single
                 .widget as BottomNavigationBar)
             .items
-            .isNotEmpty,
+            .isEmpty,
         false);
   });
 
