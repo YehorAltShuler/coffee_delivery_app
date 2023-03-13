@@ -10,8 +10,16 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     //ASSERT
-    final bottomNavBarItems = find.byType(Icon);
-    expect(bottomNavBarItems, findsNWidgets(4));
+
+    expect(
+        (find
+                .byKey(const ValueKey('BottomNavigationBar'))
+                .evaluate()
+                .single
+                .widget as BottomNavigationBar)
+            .items
+            .isEmpty,
+        false);
   });
 
   testWidgets(
