@@ -1,5 +1,6 @@
-import 'package:coffee_delivery_app/models/product.dart';
 import 'package:flutter/material.dart';
+
+import '../models/product.dart';
 
 class Products with ChangeNotifier {
   final List<Product> _items = [
@@ -31,7 +32,7 @@ class Products with ChangeNotifier {
       title: 'Bursting Blueberry',
       description:
           'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
-      price: 19.99,
+      price: 3.20,
       rate: 4.5,
       imageUrl:
           'https://i.pinimg.com/originals/d2/20/cc/d220cc7597866bd990146ee2255e3672.jpg',
@@ -42,7 +43,29 @@ class Products with ChangeNotifier {
       title: 'Dalgona Whipped Macha',
       description:
           'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
-      price: 49.99,
+      price: 4.20,
+      rate: 4.5,
+      imageUrl:
+          'https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1.jpg',
+    ),
+    Product(
+      id: 'p3',
+      drinkType: 'Cappuchino',
+      title: 'Bursting Blueberry',
+      description:
+          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
+      price: 3.20,
+      rate: 4.5,
+      imageUrl:
+          'https://i.pinimg.com/originals/d2/20/cc/d220cc7597866bd990146ee2255e3672.jpg',
+    ),
+    Product(
+      id: 'p4',
+      drinkType: 'Cappuchino',
+      title: 'Dalgona Whipped Macha',
+      description:
+          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
+      price: 4.20,
       rate: 4.5,
       imageUrl:
           'https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1.jpg',

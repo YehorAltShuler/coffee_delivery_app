@@ -19,25 +19,28 @@ class ProductDetailsScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
+          physics: const BouncingScrollPhysics(),
           slivers: [
             SliverAppBar(
               toolbarHeight: 80,
-              automaticallyImplyLeading: false,
-              titleSpacing: 30,
-              title: Padding(
-                padding: const EdgeInsets.only(top: 26),
+              leadingWidth: 80,
+              leading: Padding(
+                padding: const EdgeInsets.only(top: 26, left: 24),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(50),
                   child: BackdropFilter(
                     filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
-                    child: Material(
-                      color: Colors.transparent,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.transparent,
+                      ),
                       child: IconButton(
                         onPressed: Navigator.of(context).pop,
                         icon: const Icon(
                           CustomIcons.backArrow,
                           size: 16,
-                          color: Colors.white70,
+                          color: AppColors.WHITE_70_OPACITY,
                         ),
                       ),
                     ),

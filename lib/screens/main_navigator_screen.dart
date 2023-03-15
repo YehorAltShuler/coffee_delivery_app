@@ -42,24 +42,37 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
           NewsScreen(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: AppColors.NAV_BAR_COLOR,
-        selectedItemColor: Theme.of(context).colorScheme.secondary,
-        unselectedItemColor: AppColors.UNSELECTED_SECONDARY_COLOR,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(CustomIcons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(CustomIcons.cart), label: 'Cart'),
-          BottomNavigationBarItem(
-            icon: Icon(CustomIcons.heart),
-            label: 'Favorites',
-          ),
-          BottomNavigationBarItem(icon: Icon(CustomIcons.bell), label: 'News'),
-        ],
-        onTap: _onItemTapped,
-        currentIndex: _selectedIndex,
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(boxShadow: [
+          BoxShadow(
+            color: AppColors.NAV_BAR_SHADOW_COLOR,
+            blurRadius: 10,
+            offset: Offset(0, -1),
+          )
+        ]),
+        child: BottomNavigationBar(
+          key: const ValueKey('BottomNavigationBar'),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: AppColors.NAV_BAR_COLOR,
+          selectedItemColor: Theme.of(context).colorScheme.secondary,
+          unselectedItemColor: AppColors.FADED_SECONDARY_COLOR,
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(CustomIcons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(CustomIcons.cart), label: 'Cart'),
+            BottomNavigationBarItem(
+              icon: Icon(CustomIcons.heart),
+              label: 'Favorites',
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(CustomIcons.bell), label: 'News'),
+          ],
+          onTap: _onItemTapped,
+          currentIndex: _selectedIndex,
+        ),
       ),
     );
   }

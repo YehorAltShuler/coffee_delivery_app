@@ -29,19 +29,17 @@ class CardProductAdd extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          Container(
             height: 35,
             width: 35,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Material(
-                color: AppColors.SECONDARY_COLOR,
-                child: InkWell(
-                    onTap: () {},
-                    child: const Icon(
-                      CustomIcons.add,
-                      size: 14,
-                    )),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                color: AppColors.SECONDARY_COLOR),
+            child: InkWell(
+              onTap: () {},
+              child: const Icon(
+                CustomIcons.add,
+                size: 14,
               ),
             ),
           ),

@@ -1,7 +1,9 @@
+import 'package:coffee_delivery_app/providers/products_provider.dart';
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:coffee_delivery_app/screens/ProductDetails/product_details_screen.dart';
 import 'package:coffee_delivery_app/screens/main_navigator_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());

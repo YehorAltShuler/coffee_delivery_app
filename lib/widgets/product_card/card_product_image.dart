@@ -34,6 +34,7 @@ class CardProductImage extends StatelessWidget {
               filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
               child: Container(
                 decoration: const BoxDecoration(
+                  color: AppColors.BLURRED_RATE_CONTAINER_COLOR,
                   borderRadius:
                       BorderRadius.only(bottomRight: Radius.circular(20)),
                 ),
