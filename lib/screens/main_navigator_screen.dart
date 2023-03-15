@@ -43,7 +43,7 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
         ],
       ),
       bottomNavigationBar: Container(
-        decoration: BoxDecoration(boxShadow: [
+        decoration: const BoxDecoration(boxShadow: [
           BoxShadow(
             color: AppColors.NAV_BAR_SHADOW_COLOR,
             blurRadius: 10,
