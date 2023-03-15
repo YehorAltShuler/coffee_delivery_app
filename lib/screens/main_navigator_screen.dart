@@ -5,6 +5,8 @@ import 'package:coffee_delivery_app/screens/home_screen.dart';
 import 'package:coffee_delivery_app/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../resources/values/custom_icons.dart';
+
 class MainNavigatorScreen extends StatefulWidget {
   const MainNavigatorScreen({super.key});
 
@@ -44,19 +46,17 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: AppColors.NAV_BAR_COLOR,
         selectedItemColor: Theme.of(context).colorScheme.secondary,
         unselectedItemColor: AppColors.UNSELECTED_SECONDARY_COLOR,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(CustomIcons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(CustomIcons.cart), label: 'Cart'),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'Cart'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
+            icon: Icon(CustomIcons.heart),
             label: 'Favorites',
           ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications), label: 'News'),
+          BottomNavigationBarItem(icon: Icon(CustomIcons.bell), label: 'News'),
         ],
         onTap: _onItemTapped,
         currentIndex: _selectedIndex,
