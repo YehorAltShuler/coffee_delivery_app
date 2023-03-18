@@ -1,7 +1,7 @@
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:coffee_delivery_app/screens/cart_screen.dart';
 import 'package:coffee_delivery_app/screens/favorites_screen.dart';
-import 'package:coffee_delivery_app/screens/home_screen.dart';
+import 'package:coffee_delivery_app/screens/home_screen/home_screen.dart';
 import 'package:coffee_delivery_app/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +57,7 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
           type: BottomNavigationBarType.fixed,
           backgroundColor: AppColors.NAV_BAR_COLOR,
           selectedItemColor: Theme.of(context).colorScheme.secondary,
-          unselectedItemColor: AppColors.FADED_SECONDARY_COLOR,
+          unselectedItemColor: AppColors.SECONDARY_COLOR_50_OPACITY,
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(CustomIcons.home), label: 'Home'),

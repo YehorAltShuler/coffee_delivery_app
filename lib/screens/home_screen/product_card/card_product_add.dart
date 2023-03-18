@@ -1,7 +1,7 @@
 import 'package:coffee_delivery_app/resources/values/custom_icons.dart';
 import 'package:flutter/material.dart';
 
-import '../../resources/values/app_colors.dart';
+import '../../../resources/values/app_colors.dart';
 
 class CardProductAdd extends StatelessWidget {
   const CardProductAdd({super.key, required this.price});
@@ -12,7 +12,7 @@ class CardProductAdd extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: AppColors.VERY_FADED_SECONDARY_COLOR,
+        color: AppColors.WHITE_8_OPACITY,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
