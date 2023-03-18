@@ -3,10 +3,11 @@ import 'dart:ui';
 import 'package:coffee_delivery_app/models/product.dart';
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:coffee_delivery_app/resources/values/app_constants.dart';
-import 'package:coffee_delivery_app/resources/values/custom_icons.dart';
 import 'package:coffee_delivery_app/widgets/category_selector.dart';
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
+
+import '../../resources/values/custom_icons.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
   const ProductDetailsScreen({super.key});
