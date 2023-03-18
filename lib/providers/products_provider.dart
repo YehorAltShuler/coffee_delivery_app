@@ -76,6 +76,8 @@ class Products with ChangeNotifier {
     return [..._items];
   }
 
+  late List<Product> filteredProducts = [..._items];
+
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
   }
@@ -84,8 +86,8 @@ class Products with ChangeNotifier {
     return _items.where((prodItem) => prodItem.isFavorite).toList();
   }
 
-  void addProduct() {
-    // _items.add(value);
+  void filterProductList(List<Product> productList) {
+    filteredProducts = productList;
     notifyListeners();
   }
 }
