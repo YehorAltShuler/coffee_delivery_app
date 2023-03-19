@@ -4,7 +4,7 @@ import 'package:coffee_delivery_app/widgets/product_card/card_product_image.dart
 import 'package:flutter/material.dart';
 
 import '../../models/product.dart';
-import '../../screens/ProductDetails/product_details_screen.dart';
+import '../../screens/product_details/product_details_screen.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({super.key, required this.product});

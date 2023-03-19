@@ -1,5 +1,5 @@
 import 'package:coffee_delivery_app/main.dart';
-import 'package:coffee_delivery_app/widgets/product_card/product_card.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:network_image_mock/network_image_mock.dart';
 
@@ -8,7 +8,7 @@ void main() {
       (WidgetTester tester) async {
     await mockNetworkImagesFor(() => tester.pumpWidget(const MyApp()));
 
-    final productCards = find.byType(ProductCard);
-    expect(productCards, findsAtLeastNWidgets(1));
+    final productCard = find.byKey(const ValueKey('Home Screen Product Card'));
+    expect(productCard, findsAtLeastNWidgets(1));
   });
 }

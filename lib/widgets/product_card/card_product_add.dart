@@ -21,10 +21,7 @@ class CardProductAdd extends StatelessWidget {
             child: Center(
               child: Text(
                 price.toString(),
-                style: Theme.of(context)
-                    .textTheme
-                    .titleMedium
-                    ?.copyWith(fontFamily: 'OpenSans'),
+                style: Theme.of(context).textTheme.bodyLarge,
                 overflow: TextOverflow.ellipsis,
               ),
             ),

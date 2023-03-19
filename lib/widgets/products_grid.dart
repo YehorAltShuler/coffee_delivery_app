@@ -16,8 +16,10 @@ class ProductsGrid extends StatelessWidget {
         crossAxisCount: 2,
       ),
       itemCount: products.length,
-      itemBuilder: (BuildContext context, int index) =>
-          ProductCard(product: products[index]),
+      itemBuilder: (BuildContext context, int index) => ProductCard(
+        product: products[index],
+        key: const ValueKey('Home Screen Product Card'),
+      ),
     );
   }
 }
