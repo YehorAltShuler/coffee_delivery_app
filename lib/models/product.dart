@@ -6,7 +6,7 @@ class Product {
   final double price;
   final String imageUrl;
   final double rate;
-  final bool isFavorite;
+  bool isFavorite;
 
   Product({
     required this.id,
@@ -16,7 +16,7 @@ class Product {
     required this.price,
     required this.imageUrl,
     required this.rate,
-    this.isFavorite = false,
+    required this.isFavorite,
   });
 
   Product copyWith(
