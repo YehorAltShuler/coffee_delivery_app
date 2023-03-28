@@ -5,6 +5,8 @@ import 'package:coffee_delivery_app/screens/home_screen.dart';
 import 'package:coffee_delivery_app/screens/news_screen.dart';
 import 'package:flutter/material.dart';
 
+import '../resources/values/custom_icons.dart';
+
 class MainNavigatorScreen extends StatefulWidget {
   const MainNavigatorScreen({super.key});
 
@@ -40,26 +42,37 @@ class _MainNavigatorState extends State<MainNavigatorScreen> {
           NewsScreen(),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        selectedItemColor: Theme.of(context).colorScheme.secondary,
-        unselectedItemColor: AppColors.UNSELECTED_SECONDARY_COLOR,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_cart), label: 'Cart'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: 'Favorites',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.notifications), label: 'News'),
-        ],
-        onTap: _onItemTapped,
-        currentIndex: _selectedIndex,
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(boxShadow: [
+          BoxShadow(
+            color: AppColors.NAV_BAR_SHADOW_COLOR,
+            blurRadius: 10,
+            offset: Offset(0, -1),
+          )
+        ]),
+        child: BottomNavigationBar(
+          key: const ValueKey('BottomNavigationBar'),
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: AppColors.NAV_BAR_COLOR,
+          selectedItemColor: Theme.of(context).colorScheme.secondary,
+          unselectedItemColor: AppColors.FADED_SECONDARY_COLOR,
+          items: const [
+            BottomNavigationBarItem(
+                icon: Icon(CustomIcons.home), label: 'Home'),
+            BottomNavigationBarItem(
+                icon: Icon(CustomIcons.cart), label: 'Cart'),
+            BottomNavigationBarItem(
+              icon: Icon(CustomIcons.heart),
+              label: 'Favorites',
+            ),
+            BottomNavigationBarItem(
+                icon: Icon(CustomIcons.bell), label: 'News'),
+          ],
+          onTap: _onItemTapped,
+          currentIndex: _selectedIndex,
+        ),
       ),
     );
   }
