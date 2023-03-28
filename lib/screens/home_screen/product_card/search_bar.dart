@@ -48,6 +48,7 @@ class _SearchBarState extends State<SearchBar> {
             horizontal: AppConstants.kDefaultPadding,
             vertical: AppConstants.kDefaultPadding * 2),
         child: TextField(
+          cursorColor: AppColors.SECONDARY_COLOR,
           onChanged: (value) => runFilter(value),
           decoration: InputDecoration(
             isDense: true,
@@ -55,19 +56,27 @@ class _SearchBarState extends State<SearchBar> {
               borderRadius: BorderRadius.circular(15),
               borderSide: const BorderSide(color: AppColors.SEARCH_BAR_COLOR),
             ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide:
+                  const BorderSide(color: AppColors.SECONDARY_COLOR_50_OPACITY),
+            ),
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
               borderSide: const BorderSide(color: AppColors.SEARCH_BAR_COLOR),
             ),
             filled: true,
             fillColor: AppColors.SEARCH_BAR_COLOR,
-            floatingLabelBehavior: FloatingLabelBehavior.never,
-            label: Text(
-              'Browse your favourite coffee...',
-              style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    color: AppColors.SECONDARY_COLOR_50_OPACITY,
-                  ),
-            ),
+            hintText: 'Browse your favourite coffee...',
+            hintStyle: Theme.of(context).textTheme.titleSmall!.copyWith(
+                  color: AppColors.SECONDARY_COLOR_50_OPACITY,
+                ),
+            // prefixIconColor: MaterialStateColor.resolveWith((states) {
+            //   if (states.contains(MaterialState.focused)) {
+            //     return AppColors.SECONDARY_COLOR;
+            //   }
+            //   return AppColors.SECONDARY_COLOR_50_OPACITY;
+            // }),
             prefixIcon: const Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.0),
               child: Icon(
