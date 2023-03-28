@@ -20,8 +20,10 @@ class ProductsGrid extends StatelessWidget {
       ),
       delegate: SliverChildBuilderDelegate(
         childCount: filteredProducts.length,
-        (BuildContext context, int index) =>
-            ProductCard(product: filteredProducts[index]),
+        (BuildContext context, int index) => ProductCard(
+          product: filteredProducts[index],
+          key: const ValueKey('Home Screen Product Card'),
+        ),
       ),
     );
   }
