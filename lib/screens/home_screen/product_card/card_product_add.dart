@@ -1,15 +1,19 @@
+import 'package:coffee_delivery_app/models/product.dart';
+import 'package:coffee_delivery_app/providers/cart_items_provider.dart';
 import 'package:coffee_delivery_app/resources/values/custom_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../../resources/values/app_colors.dart';
 
 class CardProductAdd extends StatelessWidget {
-  const CardProductAdd({super.key, required this.price});
+  const CardProductAdd({super.key, required this.product});
 
-  final double price;
+  final Product product;
 
   @override
   Widget build(BuildContext context) {
+    final cartItems = Provider.of<CartItems>(context);
     return Container(
       decoration: BoxDecoration(
         color: AppColors.WHITE_8_OPACITY,
@@ -20,7 +24,7 @@ class CardProductAdd extends StatelessWidget {
           Expanded(
             child: Center(
               child: Text(
-                price.toString(),
+                product.price.toString(),
                 style: Theme.of(context).textTheme.bodyLarge,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -33,7 +37,9 @@ class CardProductAdd extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 color: AppColors.SECONDARY_COLOR),
             child: InkWell(
-              onTap: () {},
+              borderRadius: BorderRadius.circular(10),
+              onTap: () => cartItems.addItem(product.id, product.price,
+                  product.title, product.drinkType, product.imageUrl),
               child: const Icon(
                 CustomIcons.add,
                 size: 14,
