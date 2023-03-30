@@ -11,7 +11,9 @@ class AppColors {
   static const Color SEARCH_BAR_COLOR = Color(0xff171017);
   static const Color SECONDARY_COLOR = Color(0xffefe3c8);
   static const Color SECONDARY_COLOR_50_OPACITY = Color(0x80EFE3C8);
+  static const Color COUPON_COLOR = Color(0xff38232A);
 
+  static const Color WHITE_20_OPACITY = Color(0x30FFFFFF);
   static const Color WHITE_8_OPACITY = Color(0x14FFFFFF);
   static const Color STAR_COLOR = Color(0xFFD3A501);
   static const Color LIGHT_GREY_COLOR = Color(0xFFC0C0C0);

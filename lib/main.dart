@@ -1,3 +1,4 @@
+import 'package:coffee_delivery_app/providers/cart_items_provider.dart';
 import 'package:coffee_delivery_app/providers/products_provider.dart';
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:coffee_delivery_app/screens/product_details_screen/product_details_screen.dart';
@@ -14,11 +15,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (
-        BuildContext context,
-      ) =>
-          ProductsProvider(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(
+          create: (BuildContext context) => ProductsProvider(),
+        ),
+        ChangeNotifierProvider(
+          create: (BuildContext context) => CartItems(),
+        ),
+      ],
       child: MaterialApp(
         title: 'Coffee Delivery App',
         theme: ThemeData(
