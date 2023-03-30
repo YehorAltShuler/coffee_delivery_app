@@ -2,40 +2,7 @@ import 'package:coffee_delivery_app/models/cart_item.dart';
 import 'package:flutter/material.dart';
 
 class CartItems with ChangeNotifier {
-  final Map<String, CartItem> _cartItems = {
-    'c1': CartItem(
-        cartItemType: 'Cappuchino',
-        cartItemTitle: 'Cinamon & Cocoa',
-        cartItemPrice: 1.20,
-        cartItemImageUrl:
-            'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2015_40/796316/latteartheart-11-150929.jpg',
-        cartItemQuantity: 1,
-        cartItemId: 'c1'),
-    'c2': CartItem(
-        cartItemType: 'Cappuchino',
-        cartItemTitle: 'Cinamon & Cocoa',
-        cartItemPrice: 1.20,
-        cartItemImageUrl:
-            'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2015_40/796316/latteartheart-11-150929.jpg',
-        cartItemQuantity: 1,
-        cartItemId: 'c1'),
-    'c3': CartItem(
-        cartItemType: 'Cappuchino',
-        cartItemTitle: 'Cinamon & Cocoa',
-        cartItemPrice: 1.20,
-        cartItemImageUrl:
-            'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2015_40/796316/latteartheart-11-150929.jpg',
-        cartItemQuantity: 1,
-        cartItemId: 'c1'),
-    'c4': CartItem(
-        cartItemType: 'Cappuchino',
-        cartItemTitle: 'Cinamon & Cocoa',
-        cartItemPrice: 1.20,
-        cartItemImageUrl:
-            'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2015_40/796316/latteartheart-11-150929.jpg',
-        cartItemQuantity: 1,
-        cartItemId: 'c1'),
-  };
+  final Map<String, CartItem> _cartItems = {};
 
   Map<String, CartItem> get cartItems {
     return {..._cartItems};
