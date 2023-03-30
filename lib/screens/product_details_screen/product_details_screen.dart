@@ -228,16 +228,17 @@ class ProductDetailsScreen extends StatelessWidget {
                           child: SizedBox(
                             height: 50,
                             child: ElevatedButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'BUY NOW',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .titleMedium
-                                      ?.copyWith(
-                                          color: AppColors.BUY_NOW_COLOR,
-                                          fontFamily: 'OpenSans'),
-                                )),
+                              onPressed: () {},
+                              child: Text(
+                                'BUY NOW',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(
+                                        color: AppColors.BUY_NOW_COLOR,
+                                        fontFamily: 'OpenSans'),
+                              ),
+                            ),
                           ),
                         )
                       ],

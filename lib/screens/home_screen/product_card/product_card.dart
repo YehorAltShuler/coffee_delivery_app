@@ -46,7 +46,7 @@ class ProductCard extends StatelessWidget {
                   ),
                 ),
               ),
-              CardProductAdd(price: product.price)
+              CardProductAdd(product: product)
             ],
           ),
         ),

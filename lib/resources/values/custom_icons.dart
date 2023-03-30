@@ -37,4 +37,8 @@ class CustomIcons {
       IconData(0xe806, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData search =
       IconData(0xe807, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData trashCan =
+      IconData(0xe809, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData goArrow =
+      IconData(0xe80c, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
