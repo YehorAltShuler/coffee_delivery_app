@@ -1,5 +1,5 @@
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
-import 'package:coffee_delivery_app/screens/cart_screen.dart';
+import 'package:coffee_delivery_app/screens/cart_screen/cart_screen.dart';
 import 'package:coffee_delivery_app/screens/favorites_screen.dart';
 import 'package:coffee_delivery_app/screens/home_screen/home_screen.dart';
 import 'package:coffee_delivery_app/screens/news_screen.dart';
