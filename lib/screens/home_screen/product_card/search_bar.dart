@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../models/product.dart';
 import '../../../providers/products_provider.dart';
 import '../../../resources/values/app_colors.dart';
 import '../../../resources/values/app_constants.dart';
@@ -20,21 +19,11 @@ class _SearchBarState extends State<SearchBar> {
     final productsData = Provider.of<Products>(context);
     final products = productsData.items;
 
-    void runFilter(String enteredKeyword) {
-      List<Product> results = [];
-      if (enteredKeyword.isEmpty) {
-        results = products;
-        Provider.of<Products>(context, listen: false)
-            .filterProductList(results);
-      } else {
-        results = products
-            .where((product) => product.title
-                .toLowerCase()
-                .contains(enteredKeyword.toLowerCase()))
-            .toList();
-        Provider.of<Products>(context, listen: false)
-            .filterProductList(results);
-      }
+    void runFilter(String enterdKeyword) {
+      Provider.of<Products>(context, listen: false).filterProductList(products
+          .where((product) =>
+              product.title.toLowerCase().contains(enterdKeyword.toLowerCase()))
+          .toList());
     }
 
     return Container(
@@ -48,8 +37,9 @@ class _SearchBarState extends State<SearchBar> {
             horizontal: AppConstants.kDefaultPadding,
             vertical: AppConstants.kDefaultPadding * 2),
         child: TextField(
+          key: const ValueKey('Products Search Bar'),
           cursorColor: AppColors.SECONDARY_COLOR,
-          onChanged: (value) => runFilter(value),
+          onChanged: (enteredString) => runFilter(enteredString),
           decoration: InputDecoration(
             isDense: true,
             enabledBorder: OutlineInputBorder(
