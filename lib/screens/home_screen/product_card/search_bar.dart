@@ -16,14 +16,16 @@ class SearchBar extends StatefulWidget {
 class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
-    final productsData = Provider.of<Products>(context);
+    final productsData = Provider.of<ProductsProvider>(context);
     final products = productsData.items;
 
     void runFilter(String enterdKeyword) {
-      Provider.of<Products>(context, listen: false).filterProductList(products
-          .where((product) =>
-              product.title.toLowerCase().contains(enterdKeyword.toLowerCase()))
-          .toList());
+      Provider.of<ProductsProvider>(context, listen: false).filterProductList(
+          products
+              .where((product) => product.title
+                  .toLowerCase()
+                  .contains(enterdKeyword.toLowerCase()))
+              .toList());
     }
 
     return Container(

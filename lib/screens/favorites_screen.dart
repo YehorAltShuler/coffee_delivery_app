@@ -9,7 +9,7 @@ class FavoritesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final products = Provider.of<Products>(context);
+    final products = Provider.of<ProductsProvider>(context);
     final favoriteProducts = products.favoriteProducts;
     return Scaffold(
       appBar: AppBar(title: const Text('Favorites Screen')),
@@ -23,7 +23,7 @@ class FavoritesScreen extends StatelessWidget {
                 icon: Icon(CustomIcons.heart,
                     color: favoriteProducts[index].isFavorite == true
                         ? AppColors.FAVORITE_COLOR
-                        : Colors.grey),
+                        : AppColors.SECONDARY_COLOR_50_OPACITY),
                 onPressed: () {
                   products.toggleFavorite(favoriteProducts[index]);
                 },
