@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       create: (
         BuildContext context,
       ) =>
-          Products(),
+          ProductsProvider(),
       child: MaterialApp(
         title: 'Coffee Delivery App',
         theme: ThemeData(

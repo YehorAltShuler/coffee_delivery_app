@@ -18,7 +18,7 @@ class ProductDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final products = Provider.of<Products>(context);
+    final products = Provider.of<ProductsProvider>(context);
     final product = ModalRoute.of(context)?.settings.arguments as Product;
     return Scaffold(
       body: SafeArea(
@@ -111,7 +111,7 @@ class ProductDetailsScreen extends StatelessWidget {
                                     CustomIcons.heart,
                                     color: product.isFavorite
                                         ? AppColors.FAVORITE_COLOR
-                                        : Colors.grey,
+                                        : AppColors.SECONDARY_COLOR_50_OPACITY,
                                     size: 26,
                                   ),
                                 );
