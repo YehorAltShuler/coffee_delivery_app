@@ -58,7 +58,9 @@ class ProductsProvider with ChangeNotifier {
     return [..._items];
   }
 
-  late List<Product> filteredProducts = [..._items];
+  late List<Product> _filteredProducts = [..._items];
+
+  get filteredProducts => [..._filteredProducts];
 
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
@@ -70,7 +72,7 @@ class ProductsProvider with ChangeNotifier {
   }
 
   set filterProductsList(String searchKeyWord) {
-    filteredProducts = _items
+    _filteredProducts = _items
         .where((element) =>
             element.title.toLowerCase().contains(searchKeyWord.toLowerCase()))
         .toList();
