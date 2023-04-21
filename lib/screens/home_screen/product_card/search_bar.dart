@@ -17,16 +17,6 @@ class _SearchBarState extends State<SearchBar> {
   @override
   Widget build(BuildContext context) {
     final productsData = Provider.of<ProductsProvider>(context);
-    final products = productsData.items;
-
-    void runFilter(String enterdKeyword) {
-      Provider.of<ProductsProvider>(context, listen: false).filterProductList(
-          products
-              .where((product) => product.title
-                  .toLowerCase()
-                  .contains(enterdKeyword.toLowerCase()))
-              .toList());
-    }
 
     return Container(
       decoration: const BoxDecoration(
@@ -41,7 +31,8 @@ class _SearchBarState extends State<SearchBar> {
         child: TextField(
           key: const ValueKey('Products Search Bar'),
           cursorColor: AppColors.SECONDARY_COLOR,
-          onChanged: (enteredString) => runFilter(enteredString),
+          onChanged: (enteredString) =>
+              productsData.filterProductsList = enteredString,
           decoration: InputDecoration(
             isDense: true,
             enabledBorder: OutlineInputBorder(
