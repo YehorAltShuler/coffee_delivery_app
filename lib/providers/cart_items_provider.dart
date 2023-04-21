@@ -1,7 +1,7 @@
 import 'package:coffee_delivery_app/models/cart_item.dart';
 import 'package:flutter/material.dart';
 
-class CartItems with ChangeNotifier {
+class CartItemsProvider with ChangeNotifier {
   final Map<String, CartItem> _cartItems = {};
 
   Map<String, CartItem> get cartItems {

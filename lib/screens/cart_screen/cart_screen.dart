@@ -15,7 +15,7 @@ class CartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartItems = Provider.of<CartItems>(context);
+    final cartItems = Provider.of<CartItemsProvider>(context);
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
@@ -53,7 +53,7 @@ class CartScreen extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleSmall,
                         ),
                         Text(
-                          '\$4.9',
+                          '\$Mock Data',
                           style: Theme.of(context).textTheme.bodyMedium,
                         )
                       ],
@@ -67,7 +67,7 @@ class CartScreen extends StatelessWidget {
                           style: Theme.of(context).textTheme.titleSmall,
                         ),
                         Text(
-                          '\$6.4',
+                          '\$Mock Data',
                           style: Theme.of(context).textTheme.bodyMedium,
                         )
                       ],

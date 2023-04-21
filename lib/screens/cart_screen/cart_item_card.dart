@@ -13,7 +13,7 @@ class CartItemCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartItems = Provider.of<CartItems>(context);
+    final cartItems = Provider.of<CartItemsProvider>(context);
     return Card(
       color: AppColors.FADED_PRIMARY_COLOR,
       shape: RoundedRectangleBorder(
