@@ -58,11 +58,7 @@ class ProductsProvider with ChangeNotifier {
     return [..._items];
   }
 
-  late final List<Product> _filteredProducts = [..._items];
-
-  List<Product> get filteredProducts {
-    return [..._filteredProducts];
-  }
+  late List<Product> filteredProducts = [..._items];
 
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
@@ -73,13 +69,15 @@ class ProductsProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  List<Product> get favoriteProducts {
-    return _items.where((prodItem) => prodItem.isFavorite == true).toList();
+  set filterProductsList(String searchKeyWord) {
+    filteredProducts = _items
+        .where((element) =>
+            element.title.toLowerCase().contains(searchKeyWord.toLowerCase()))
+        .toList();
+    notifyListeners();
   }
 
-  void filterProductList(List<Product> productList) {
-    _filteredProducts.clear();
-    _filteredProducts.insertAll(0, productList);
-    notifyListeners();
+  List<Product> get favoriteProducts {
+    return _items.where((prodItem) => prodItem.isFavorite == true).toList();
   }
 }
