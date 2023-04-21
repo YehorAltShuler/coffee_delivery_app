@@ -1,6 +1,4 @@
 import 'dart:ui';
-
-import 'package:coffee_delivery_app/models/product.dart';
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:coffee_delivery_app/resources/values/app_constants.dart';
 import 'package:coffee_delivery_app/widgets/category_selector.dart';
@@ -19,7 +17,8 @@ class ProductDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final products = Provider.of<Products>(context);
-    final product = ModalRoute.of(context)?.settings.arguments as Product;
+    final productId = ModalRoute.of(context)?.settings.arguments as String;
+    final product = products.findById(productId);
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(

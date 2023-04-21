@@ -13,17 +13,18 @@ class ProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context)
-            .pushNamed(ProductDetailsScreen.routeName, arguments: product);
-      },
-      child: Card(
-        margin: const EdgeInsets.all(10),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
-        ),
-        color: AppColors.FADED_PRIMARY_COLOR,
+    return Card(
+      margin: const EdgeInsets.all(10),
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      color: AppColors.FADED_PRIMARY_COLOR,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(15.0),
+        onTap: () {
+          Navigator.of(context)
+              .pushNamed(ProductDetailsScreen.routeName, arguments: product.id);
+        },
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(

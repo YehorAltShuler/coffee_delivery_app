@@ -38,8 +38,13 @@ class CardProductAdd extends StatelessWidget {
                 color: AppColors.SECONDARY_COLOR),
             child: InkWell(
               borderRadius: BorderRadius.circular(10),
-              onTap: () => cartItems.addItem(product.id, product.price,
-                  product.title, product.drinkType, product.imageUrl),
+              onTap: () => cartItems.addItem(
+                  product.id,
+                  product.price,
+                  product.title,
+                  product.drinkType,
+                  product.imageUrl,
+                  product.id),
               child: const Icon(
                 CustomIcons.add,
                 size: 14,
