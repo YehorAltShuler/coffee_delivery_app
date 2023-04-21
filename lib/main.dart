@@ -18,7 +18,11 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
+<<<<<<< HEAD
           create: (BuildContext context) => ProductsProvider(),
+=======
+          create: (BuildContext context) => Products(),
+>>>>>>> aac0ad27c9732048deffb13df24529ac071dd06f
         ),
         ChangeNotifierProvider(
           create: (BuildContext context) => CartItemsProvider(),
@@ -36,12 +40,22 @@ class MyApp extends StatelessWidget {
             backgroundColor: AppColors.SECONDARY_COLOR,
           )),
           textTheme: ThemeData().textTheme.copyWith(
+<<<<<<< HEAD
                 headlineSmall: const TextStyle(color: AppColors.WHITE_COLOR),
                 labelLarge: const TextStyle(color: AppColors.WHITE_COLOR),
                 titleMedium: const TextStyle(color: AppColors.WHITE_COLOR),
                 titleSmall: const TextStyle(color: AppColors.WHITE_COLOR),
                 labelMedium: const TextStyle(color: AppColors.WHITE_COLOR),
                 labelSmall: const TextStyle(color: AppColors.WHITE_COLOR),
+=======
+                headlineSmall: const TextStyle(color: Colors.white),
+                titleLarge: const TextStyle(color: Colors.white),
+                titleMedium: const TextStyle(color: Colors.white),
+                titleSmall: const TextStyle(color: Colors.white),
+                labelLarge: const TextStyle(color: Colors.white),
+                labelMedium: const TextStyle(color: Colors.white),
+                labelSmall: const TextStyle(color: Colors.white),
+>>>>>>> aac0ad27c9732048deffb13df24529ac071dd06f
                 bodyLarge: const TextStyle(
                     color: AppColors.WHITE_COLOR, fontFamily: 'OpenSans'),
                 bodyMedium: const TextStyle(
