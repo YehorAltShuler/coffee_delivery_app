@@ -8,7 +8,7 @@ class CartItemsList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartItems = Provider.of<CartItems>(context);
+    final cartItems = Provider.of<CartItemsProvider>(context);
     final cartItemsMap = cartItems.cartItems;
 
     return SliverList(

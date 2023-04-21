@@ -13,7 +13,7 @@ class CardProductAdd extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cartItems = Provider.of<CartItems>(context);
+    final cartItems = Provider.of<CartItemsProvider>(context);
     return Container(
       decoration: BoxDecoration(
         color: AppColors.WHITE_8_OPACITY,
