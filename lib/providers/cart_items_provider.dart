@@ -20,8 +20,8 @@ class CartItemsProvider with ChangeNotifier {
     return total;
   }
 
-  void addItem(
-      String idKey, double price, String title, String type, String imageUrl) {
+  void addItem(String idKey, double price, String title, String type,
+      String imageUrl, productId) {
     if (_cartItems.containsKey(idKey)) {
       return;
     } else {
@@ -33,7 +33,8 @@ class CartItemsProvider with ChangeNotifier {
             cartItemTitle: title,
             cartItemPrice: price,
             cartItemImageUrl: imageUrl,
-            cartItemQuantity: 1),
+            cartItemQuantity: 1,
+            productId: productId),
       );
     }
     notifyListeners();
@@ -55,6 +56,7 @@ class CartItemsProvider with ChangeNotifier {
           cartItemImageUrl: existingCartItem.cartItemImageUrl,
           cartItemQuantity: existingCartItem.cartItemQuantity + 1,
           cartItemId: existingCartItem.cartItemId,
+          productId: existingCartItem.productId,
         ),
       );
     }
@@ -75,8 +77,11 @@ class CartItemsProvider with ChangeNotifier {
           cartItemImageUrl: existingCartItem.cartItemImageUrl,
           cartItemQuantity: existingCartItem.cartItemQuantity - 1,
           cartItemId: existingCartItem.cartItemId,
+          productId: existingCartItem.productId,
         ),
       );
+    } else if (_cartItems[idKey]!.cartItemQuantity == 1) {
+      removeItem(idKey);
     }
     notifyListeners();
   }
