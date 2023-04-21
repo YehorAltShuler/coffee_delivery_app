@@ -1,3 +1,4 @@
+import 'package:coffee_delivery_app/models/product.dart';
 import 'package:coffee_delivery_app/screens/home_screen/product_card/product_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -12,7 +13,7 @@ class ProductsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final products = Provider.of<ProductsProvider>(context);
-    final filteredProducts = products.filteredProducts;
+    final filteredProducts = products.filteredProducts as List<Product>;
     return SliverGrid(
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         childAspectRatio: 2 / 3.5,
