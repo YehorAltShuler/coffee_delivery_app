@@ -1,12 +1,12 @@
 import 'dart:ui';
-
-import 'package:coffee_delivery_app/models/product.dart';
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:coffee_delivery_app/resources/values/app_constants.dart';
 import 'package:coffee_delivery_app/widgets/category_selector.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:readmore/readmore.dart';
 
+import '../../providers/products_provider.dart';
 import '../../resources/values/custom_icons.dart';
 
 class ProductDetailsScreen extends StatelessWidget {
@@ -16,7 +16,9 @@ class ProductDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final product = ModalRoute.of(context)?.settings.arguments as Product;
+    final products = Provider.of<ProductsProvider>(context);
+    final productId = ModalRoute.of(context)?.settings.arguments as String;
+    final product = products.findById(productId);
     return Scaffold(
       body: SafeArea(
         child: CustomScrollView(
@@ -97,13 +99,22 @@ class ProductDetailsScreen extends StatelessWidget {
                               product.drinkType,
                               style: Theme.of(context).textTheme.headlineSmall,
                             ),
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(
-                                CustomIcons.heart,
-                                color: AppColors.FAVORITE_COLOR,
-                                size: 26,
-                              ),
+                            Consumer(
+                              builder:
+                                  (BuildContext context, value, Widget? child) {
+                                return IconButton(
+                                  onPressed: () {
+                                    products.toggleFavorite(product);
+                                  },
+                                  icon: Icon(
+                                    CustomIcons.heart,
+                                    color: product.isFavorite
+                                        ? AppColors.FAVORITE_COLOR
+                                        : AppColors.SECONDARY_COLOR_50_OPACITY,
+                                    size: 26,
+                                  ),
+                                );
+                              },
                             )
                           ],
                         ),
@@ -216,16 +227,17 @@ class ProductDetailsScreen extends StatelessWidget {
                           child: SizedBox(
                             height: 50,
                             child: ElevatedButton(
-                                onPressed: () {},
-                                child: Text(
-                                  'BUY NOW',
-                                  style: Theme.of(context)
-                                      .textTheme
-                                      .titleMedium
-                                      ?.copyWith(
-                                          color: AppColors.BUY_NOW_COLOR,
-                                          fontFamily: 'OpenSans'),
-                                )),
+                              onPressed: () {},
+                              child: Text(
+                                'BUY NOW',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .titleMedium
+                                    ?.copyWith(
+                                        color: AppColors.BUY_NOW_COLOR,
+                                        fontFamily: 'OpenSans'),
+                              ),
+                            ),
                           ),
                         )
                       ],
