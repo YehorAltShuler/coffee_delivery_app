@@ -48,32 +48,16 @@ class Products with ChangeNotifier {
       imageUrl:
           'https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1.jpg',
     ),
-    Product(
-      id: 'p3',
-      drinkType: 'Cappuchino',
-      title: 'Bursting Blueberry',
-      description:
-          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
-      price: 3.20,
-      rate: 4.5,
-      imageUrl:
-          'https://i.pinimg.com/originals/d2/20/cc/d220cc7597866bd990146ee2255e3672.jpg',
-    ),
-    Product(
-      id: 'p4',
-      drinkType: 'Cappuchino',
-      title: 'Dalgona Whipped Macha',
-      description:
-          'A single espresso shot poured into hot foamy milk, with the surface topped with mildly sweetened cocoa powder and drizzled with scrumptious caramel syrup',
-      price: 4.20,
-      rate: 4.5,
-      imageUrl:
-          'https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1.jpg',
-    ),
   ];
 
   List<Product> get items {
     return [..._items];
+  }
+
+  late final List<Product> _filteredProducts = [..._items];
+
+  List<Product> get filteredProducts {
+    return [..._filteredProducts];
   }
 
   Product findById(String id) {
@@ -84,8 +68,9 @@ class Products with ChangeNotifier {
     return _items.where((prodItem) => prodItem.isFavorite).toList();
   }
 
-  void addProduct() {
-    // _items.add(value);
+  void filterProductList(List<Product> productList) {
+    _filteredProducts.clear();
+    _filteredProducts.insertAll(0, productList);
     notifyListeners();
   }
 }

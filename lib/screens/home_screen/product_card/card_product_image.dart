@@ -1,7 +1,7 @@
 import 'dart:ui';
 import 'package:coffee_delivery_app/resources/values/app_colors.dart';
 import 'package:flutter/material.dart';
-import '../../resources/values/custom_icons.dart';
+import '../../../resources/values/custom_icons.dart';
 
 class CardProductImage extends StatelessWidget {
   const CardProductImage(
