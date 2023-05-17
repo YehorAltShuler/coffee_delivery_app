@@ -1,16 +1,31 @@
 # coffee_delivery_app
 
-A new Flutter project.
+Pet-project that i used to learn Flutter
 
-## Getting Started
+## Description
 
-This project is a starting point for a Flutter application.
+This project is a mobile application developed using the Flutter framework. The main objective of the application is to provide users with the ability to order and purchase various coffee beverages online.
 
-A few resources to get you started if this is your first Flutter project:
+## Implementation
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+For ui inspiration I used  [this project](https://www.figma.com/file/qMnX1YMS15Hu3vXTSvlPVH/Coffee-Delivery-App-Exploration-(Community))
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+State Management: Flutter Provider
+
+## Features
+
+#### Browse the list of available coffee beverages by using a search bar:
+
+![search bar](https://github.com/YehorAltShuler/coffee_delivery_app/assets/107608882/cc21016f-f881-42f9-b4ed-4726b85a9a8b)
+
+#### Go to product details screen to fet more info:
+
+![product details](https://github.com/YehorAltShuler/coffee_delivery_app/assets/107608882/85016a1e-f0c7-4710-965c-88d4ca3c5ba8)
+
+#### Add and delete your favorite beverages:
+
+![favorites](https://github.com/YehorAltShuler/coffee_delivery_app/assets/107608882/da546520-f4d9-4d77-bdb3-7014cabe7faa)
+
+#### Add your products to cart and edit them:
+
+![cart](https://github.com/YehorAltShuler/coffee_delivery_app/assets/107608882/652078ed-4d02-488f-b105-a9e78999ced1)
