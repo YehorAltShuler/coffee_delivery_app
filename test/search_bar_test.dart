@@ -13,6 +13,8 @@ void main() {
       const ValueKey('Home Screen Product Card'),
     );
 
+    expect(productCard, findsNWidgets(4));
+
     await tester.enterText(searchBar, 'DALGONA');
     await tester.pumpAndSettle();
     expect(productCard, findsOneWidget);

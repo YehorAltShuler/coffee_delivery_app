@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../models/product.dart';
 
-class Products with ChangeNotifier {
+class ProductsProvider with ChangeNotifier {
   final List<Product> _items = [
     Product(
       id: 'p1',
@@ -14,6 +14,7 @@ class Products with ChangeNotifier {
       rate: 4.5,
       imageUrl:
           'https://media-cldnry.s-nbcnews.com/image/upload/newscms/2015_40/796316/latteartheart-11-150929.jpg',
+      isFavorite: true,
     ),
     Product(
       id: 'p2',
@@ -25,6 +26,7 @@ class Products with ChangeNotifier {
       rate: 4.5,
       imageUrl:
           'https://cdn.pixabay.com/photo/2021/02/03/12/00/coffee-5977682_1280.jpg',
+      isFavorite: false,
     ),
     Product(
       id: 'p3',
@@ -36,6 +38,7 @@ class Products with ChangeNotifier {
       rate: 4.5,
       imageUrl:
           'https://i.pinimg.com/originals/d2/20/cc/d220cc7597866bd990146ee2255e3672.jpg',
+      isFavorite: false,
     ),
     Product(
       id: 'p4',
@@ -47,6 +50,7 @@ class Products with ChangeNotifier {
       rate: 4.5,
       imageUrl:
           'https://www.justonecookbook.com/wp-content/uploads/2022/12/Matcha-Latte-4598-I-1.jpg',
+      isFavorite: false,
     ),
   ];
 
@@ -54,23 +58,28 @@ class Products with ChangeNotifier {
     return [..._items];
   }
 
-  late final List<Product> _filteredProducts = [..._items];
+  late List<Product> _filteredProducts = [..._items];
 
-  List<Product> get filteredProducts {
-    return [..._filteredProducts];
-  }
+  get filteredProducts => [..._filteredProducts];
 
   Product findById(String id) {
     return _items.firstWhere((prod) => prod.id == id);
   }
 
-  List<Product> get favoriteItems {
-    return _items.where((prodItem) => prodItem.isFavorite).toList();
+  void toggleFavorite(Product product) {
+    product.isFavorite = !product.isFavorite;
+    notifyListeners();
   }
 
-  void filterProductList(List<Product> productList) {
-    _filteredProducts.clear();
-    _filteredProducts.insertAll(0, productList);
+  set filterProductsList(String searchKeyWord) {
+    _filteredProducts = _items
+        .where((element) =>
+            element.title.toLowerCase().contains(searchKeyWord.toLowerCase()))
+        .toList();
     notifyListeners();
+  }
+
+  List<Product> get favoriteProducts {
+    return _items.where((prodItem) => prodItem.isFavorite == true).toList();
   }
 }
